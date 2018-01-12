@@ -95,3 +95,39 @@ if(question4 === 'no' || question4 === 'n'){
     alert('Nah I am kidding, that is a lot of work for a javascript alert to do');
     console.log(user + ' has ' + userPoints + ' points');
 }
+
+alert('Alright ' + user + ', Everything is on this last question. Everything before means nothing now. All your points belong to me!');
+alert('If you get this question right, you win. If you get it wrong, well you don\'t win.');
+
+var question5 = prompt('Am I colorblind?', 'type yes or no').toLowerCase();
+console.log(user + ' has answered ' + question5);
+if(question5 === 'yes' || question5 === 'y') {
+    
+    userPoints++;
+    alert('Wow ' + user + '! Either you know me pretty well or that was a good guess! (probably a guess cause well...this is a guessing game)');
+    console.log(user + ' now has ' + userPoints + ' points');
+} else {
+
+    switch(userBonus) {
+        case 1:
+        alert('Hah jokes on you I AM colorblind. I will eat all your points nom nom nom nom nom.');
+        alert('NOOOOOO you\'ve foiled me! How could I forget about the bonus point! Nothing beats the bonus point! Curses! Well I guess you still have some points left!');
+        break;
+        default:
+        alert('Nope, I am definitely colorblind. It\'s a really interesting conversation to have!');
+        alert('Hah, you have nothing. I took everything. I am the better guesserer about myself. So what if I cheated and made the program this way. I typed it');
+        break;
+    }
+}
+
+console.log('end of the game');
+alert('Hope you enjoyed this javascript guessing game and learned something     about me! Lets see where you ended up with points!');
+var finalScore = userPoints + userBonus;
+console.log('add user points and bonus points');
+
+if(userPoints > 0) {
+    alert(user + ' you ended with a final score of ' + finalScore + '. You win! Anything above 0 wins!!!!');
+} else {
+    alert('Oh no! I stole your points away! It\'s okay ' + user + '. You still win. Nobody loses here!');
+}
+console.log('end of the javascript stuff');
