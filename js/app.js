@@ -2,7 +2,8 @@
 
 var userPoints = 0;
 var userBonus = 0;
-//var userAttempts = 3;
+var userAttempts = 3;
+
 
 console.log('User has connected to the site');
 alert('Come on, come all to my guess game crawl');
@@ -17,16 +18,19 @@ alert('Here there will be a series of questions about me. Who am I? Well my name
 var question1 = prompt("First Question: Am I a musician?", 'type yes or no').toLowerCase();
 console.log(user + ' has answered ' + question1);
 
-/*
-while((question1 !== 'yes' && userAttempts < 1) || (question1 !== 'y' && userAttempts < 1)) {
+/*while( userAttempts > 1) {
 
-    userAttempts--;
-    console.log(user + ' has ' + userAttempts + ' attempts left');
-    alert('Hmm keep trying!')
     question1 = prompt("First Question: Am I a musician?", 'type yes or no').toLowerCase();
     console.log(user + ' has answered ' + question1);
 
+    if(question1 === 'yes' || question1 === 'y') {
+        
+        break;
+    } else {
+        userAttempts--;
+    }
 }*/
+//alert('you did it! wooooo!')
 
 if(question1 === 'yes' || question1 === 'y') {
     
