@@ -81,3 +81,17 @@ if(question3 === 'yes' || question3 === 'yes') {
 
 }
 
+var question4 = prompt('Curveball! Am I a super secret ninja plotting to take over the world??').toLowerCase();
+console.log(user + ' has answered ' + question4);
+
+if(question4 === 'no' || question4 === 'n'){
+    userPoints++;
+    alert('well ' + user + ', I guess that wasn\'t much of a curveball huh...fine here is your point. I may not be a ninja but along side my Tai Chi instructor Certificate, I have taken Kung Fu, Muay Tai kickboxing, Savant Kickboxing and Jeet Kune Do. I like hitting things what can I say!');
+    console.log(user + ' now has ' + userPoints + ' points');
+
+} else {
+
+    alert('mmmm yessssss I will take over the world with my lazer sharks. Nothing can save you now!');
+    alert('Nah I am kidding, that is a lot of work for a javascript alert to do');
+    console.log(user + ' has ' + userPoints + ' points');
+}
