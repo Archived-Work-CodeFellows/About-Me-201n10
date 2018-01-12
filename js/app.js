@@ -39,3 +39,17 @@ if(question1 === 'yes' || question1 === 'y') {
     console.log(user + ' has ' + userPoints + ' points');
 
 }
+
+alert('Alright lets move on to the next question! Here we go!');
+var question2 = prompt('Am I an incredibly geeky person? Yeah you probably don\'t know who I am so flip a coin. Coins are unbiased right?', 'type yes or no');
+console.log(user +  ' has answered with ' + question2);
+
+if(question2 === 'yes' || question2 === 'y') {
+    userPoints++;
+    alert('Yup you would be correct, or that coin was correct or however your preferred method of guessing...um...guessed. I come from a comic book family, playing board games, role playing, super heroes, sci-fi space western...you name it. It\'s a lot of fun to have an active imagination! Point for you!');
+    console.log(user + ' now has '+ userPoints + ' points');
+} else {
+
+    alert('hmm, that wasn\'t a super fair question. Plus it was out of the blue and a lot of pressure to just judge something pretty random. I\'m sorry. So get ready for another one!');
+    console.log(user + ' has ' + userPoints + ' points');
+}
