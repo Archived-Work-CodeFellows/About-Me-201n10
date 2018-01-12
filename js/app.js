@@ -1,7 +1,8 @@
 'use strict';
 
 var userPoints = 0;
-var userAttempts = 3;
+var userBonus = 0;
+//var userAttempts = 3;
 
 console.log('User has connected to the site');
 alert('Come on, come all to my guess game crawl');
@@ -41,7 +42,7 @@ if(question1 === 'yes' || question1 === 'y') {
 }
 
 alert('Alright lets move on to the next question! Here we go!');
-var question2 = prompt('Am I an incredibly geeky person? Yeah you probably don\'t know who I am so flip a coin. Coins are unbiased right?', 'type yes or no');
+var question2 = prompt('Am I an incredibly geeky person? Yeah you probably don\'t know who I am so flip a coin. Coins are unbiased right?', 'type yes or no').toLowerCase();
 console.log(user +  ' has answered with ' + question2);
 
 if(question2 === 'yes' || question2 === 'y') {
@@ -53,3 +54,30 @@ if(question2 === 'yes' || question2 === 'y') {
     alert('hmm, that wasn\'t a super fair question. Plus it was out of the blue and a lot of pressure to just judge something pretty random. I\'m sorry. So get ready for another one!');
     console.log(user + ' has ' + userPoints + ' points');
 }
+
+alert('Cool feeling good? Sweet.');
+var question3 = prompt('Do I have any siblings?', 'type yes or no').toLowerCase();
+console.log(user + ' has answered with ' + question3);
+
+if(question3 === 'yes' || question3 === 'yes') {
+
+    userPoints++;
+    alert('You got it! I have one younger brother who is currently finishing up his third year of college.');
+    console.log(user + ' now has ' + userPoints + ' points');
+    var bonusQuestion = prompt('pssssssssssst....hey ' + user + '! Wanna get a bonus point?', 'type yes or no').toLowerCase();
+    console.log(user + ' answered ' + bonusQuestion);
+    if(bonusQuestion === 'yes' || bonusQuestion === 'y') {
+        userBonus++;
+        alert('That was it! You did it ' + user + '! Enjoy free stuff!');
+        console.log(user + ' has ' + userPoints + ' points and ' + userBonus + ' bonus points.');
+    } else {
+        alert('Oh that is cool too. Yeah I don\'t need bonus points either. Just asking for a friend');
+        console.log(user + ' has ' + userPoints + ' points');
+    }
+} else {
+
+    alert('Nope you got that one wrong. I do have one sibiling and that is a younger brother who is in the process of finishing his third year in college.');
+    console.log(user + ' has ' + userPoints + ' points');
+
+}
+
