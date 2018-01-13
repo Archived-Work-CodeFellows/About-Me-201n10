@@ -156,21 +156,51 @@ if(question3 === 'yes' || question3 === 'y') {
     console.log(user + ' attempts left: ' + userAttempts);
 }
 
-/*
-var question4 = prompt('Curveball! Am I a super secret ninja plotting to take over the world??').toLowerCase();
-console.log(user + ' has answered ' + question4);
+while( userAttempts > 0) {
 
-if(question4 === 'no' || question4 === 'n'){
-    userPoints++;
+   question4 = prompt('Curveball! Am I a super secret ninja plotting to take over the world??').toLowerCase();
+   console.log(user + ' has answered with ' + question3);
+
+    if(question4 === 'yes' || question4 === 'y') {
+        
+        break;
+    } else {
+        userAttempts--;
+        console.log(user + ' attempts left: ' + userAttempts);
+        switch(userAttempts) {
+            case 2:
+            alert('Hmm, try again '+ user + '!');
+            break;
+            case 1:
+            alert('Really...there are only two possible answers.');
+            break;
+            default:
+            alert('Lets just move on...');
+            break;
+        }
+    }
+}
+
+if(question4 === 'no' || question4 === 'n') {
+    
     alert('well ' + user + ', I guess that wasn\'t much of a curveball huh...fine here is your point. I may not be a ninja but along side my Tai Chi instructor Certificate, I have taken Kung Fu, Muay Tai kickboxing, Savant Kickboxing and Jeet Kune Do. I like hitting things what can I say!');
-    console.log(user + ' now has ' + userPoints + ' points');
+    userPoints++;
+    userAttempts = 3;
+    console.log(user + ' points: ' + userPoints);
+    console.log(user + ' attempts left: ' + userAttempts);
 
 } else {
 
+    userAttempts = 3;
     alert('mmmm yessssss I will take over the world with my lazer sharks. Nothing can save you now!');
     alert('Nah I am kidding, that is a lot of work for a javascript alert to do');
-    console.log(user + ' has ' + userPoints + ' points');
+    console.log(user + ' points: ' + userPoints);
+    console.log(user + ' attempts left: ' + userAttempts);
 }
+
+/*
+
+
 
 alert('Alright ' + user + ', Everything is on this last question. Everything before means nothing now. All your points belong to me!');
 alert('If you get this question right, you win. If you get it wrong, well you don\'t win.');
