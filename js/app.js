@@ -2,7 +2,7 @@
 
 var userPoints = 0;
 var userBonus = 0;
-var userAttempts = 3;
+var userAttempts;
 var bonusQuestion;
 var answers = [];
 
@@ -19,8 +19,10 @@ console.log(user + ' attempts left: ' + userAttempts);
 alert('Welcome ' + user + '! I hope you are ready to play a game.');
 alert('Here there will be a series of questions about me. Who am I? Well my name is Eric. Good luck ' + user + '!');
 
-while( userAttempts > 0) {
+userAttempts = 3;
 
+while(userAttempts > 0) {
+  console.log(userAttempts);
   answers.push(prompt('First Question: Am I a musician?', 'type yes or no').toLowerCase());
   console.log(user + ' has answered ' + answers[0]);
 
@@ -28,7 +30,7 @@ while( userAttempts > 0) {
     break;
   } else {
     userAttempts--;
-    console.log(user + ' attempts left: ' + userAttempts);
+    console.log(user + ' attempts left: ' + (userAttempts - 3));
     switch(userAttempts) {
     case 2:
       answers.pop();
@@ -45,16 +47,16 @@ while( userAttempts > 0) {
   }
 }
 
+userAttempts = 3;
+
 if(answers[0] === 'yes' || answers[0] === 'y') {
 
   alert('Hooray! You did it ' + user + '. I am in fact a musician! Originally I studied Classical Bassoon and Jazz Saxophone but now I just kinda play whatever I pick up when I need to do some sound design or composition! Enjoy your delicious point');
   userPoints++;
-  userAttempts = 3;
   console.log(user + ' points: ' + userPoints);
   console.log(user + ' attempts left: ' + userAttempts);
 } else {
   alert('Sorry you got this one wrong. I am a musician and originally studied Classical Bassoon and Jazz Saxophone. Now I just play whatever I pick up when I need to do sound design or compose. Hopefully you can guess better next time!');
-  userAttempts = 3;
   console.log(user + ' points: ' + userPoints);
   console.log(user + ' attempts left: ' + userAttempts);
 }
@@ -88,14 +90,14 @@ while( userAttempts > 0) {
   }
 }
 
+userAttempts = 3;
+
 if(answers[1] === 'yes' || answers[1] === 'y') {  
   alert('Yup you would be correct, or that coin was correct or however your preferred method of guessing...um...guessed. I come from a comic book family, playing board games, role playing, super heroes, sci-fi space western...you name it. It\'s a lot of fun to have an active imagination! Point for you!');
   userPoints++;
-  userAttempts = 3;
   console.log(user + ' points: ' + userPoints);
   console.log(user + ' attempts left: ' + userAttempts);
 } else {
-  userAttempts = 3;
   alert('hmm, that wasn\'t a super fair question. Plus it was out of the blue and a lot of pressure to just judge something pretty random. I\'m sorry. So get ready for another one!');
   alert('attempts all gone, it\'s okay. I will give you more so you can play!');
   console.log(user + ' points: ' + userPoints);
@@ -129,11 +131,12 @@ while( userAttempts > 0) {
   }
 }
 
+userAttempts = 3;
+
 if(answers[2] === 'yes' || answers[2] === 'y') {
 
   alert('You got it! I have one younger brother who is currently finishing up his third year of college.');
   userPoints++;
-  userAttempts = 3;
   console.log(user + ' points: ' + userPoints);
   console.log(user + ' attempts left: ' + userAttempts);
   bonusQuestion = prompt('pssssssssssst....hey ' + user + '! Wanna get a bonus point?', 'type yes or no').toLowerCase();
@@ -148,7 +151,6 @@ if(answers[2] === 'yes' || answers[2] === 'y') {
     console.log(user + ' attempts left: ' + userAttempts);
   }
 } else {
-  userAttempts = 3;
   alert('hmm, nope! I do have a younger brother who is finishing up his third year in college');
   alert('resetting attempts....loading');
   console.log(user + ' points: ' + userPoints);
@@ -184,16 +186,15 @@ while( userAttempts > 0) {
   }
 }
 
+userAttempts = 4;
+
 if(answers[3] === 'no' || answers[3] === 'n') {
   alert('well ' + user + ', I guess that wasn\'t much of a curveball huh...fine here is your point. I may not be a ninja but along side my Tai Chi instructor Certificate, I have taken Kung Fu, Muay Tai kickboxing, Savant Kickboxing and Jeet Kune Do. I like hitting things what can I say!');
   userPoints++;
-  userAttempts = 3;
   console.log(user + ' points: ' + userPoints);
   console.log(user + ' attempts left: ' + userAttempts);
 
 } else {
-
-  userAttempts = 3;
   console.log(user + ' points: ' + userPoints);
   console.log(user + ' attempts left: ' + userAttempts);
 }
@@ -218,7 +219,7 @@ if(answers[4] === 'yes' || answers[4] === 'y') {
     break;
   default:
     alert('Nope, I am definitely colorblind. It\'s a really interesting conversation to have!');
-    alert('Hah, you have nothing. I took everything. I am the better guesserer about myself. So what if I cheated and made the program this way. I typed it');
+    alert('Hah, you have nothing. I took everything. I am the better guesserer about myself. So what if I cheated and made the program this way');
     break;
   }
 }
