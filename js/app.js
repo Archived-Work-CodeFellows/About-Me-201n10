@@ -223,6 +223,7 @@ console.log('end of the game');
 alert('Hope you enjoyed this javascript guessing game and learned something     about me! Lets see where you ended up with points!');
 var finalScore = userPoints + userBonus;
 console.log('add user points and bonus points');
+consol.log(finalScore);
 
 if(finalScore > 0) {
     alert(user + ' you ended with a final score of ' + finalScore + '. You win! Anything above 0 wins!!!!');
