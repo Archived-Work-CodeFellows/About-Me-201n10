@@ -159,9 +159,9 @@ if(question3 === 'yes' || question3 === 'y') {
 while( userAttempts > 0) {
 
    question4 = prompt('Curveball! Am I a super secret ninja plotting to take over the world??').toLowerCase();
-   console.log(user + ' has answered with ' + question3);
+   console.log(user + ' has answered with ' + question4);
 
-    if(question4 === 'yes' || question4 === 'y') {
+    if(question4 === 'no' || question4 === 'n') {
         
         break;
     } else {
@@ -198,22 +198,18 @@ if(question4 === 'no' || question4 === 'n') {
     console.log(user + ' attempts left: ' + userAttempts);
 }
 
-/*
-
-
-
 alert('Alright ' + user + ', Everything is on this last question. Everything before means nothing now. All your points belong to me!');
 alert('If you get this question right, you win. If you get it wrong, well you don\'t win.');
-
-var question5 = prompt('Am I colorblind?', 'type yes or no').toLowerCase();
+question5 = prompt('Am I colorblind?', 'type yes or no').toLowerCase();
 console.log(user + ' has answered ' + question5);
+
 if(question5 === 'yes' || question5 === 'y') {
     
     userPoints++;
     alert('Wow ' + user + '! Either you know me pretty well or that was a good guess! (probably a guess cause well...this is a guessing game)');
-    console.log(user + ' now has ' + userPoints + ' points');
+    console.log(user + ' points: ' + userPoints);
 } else {
-
+    userPoints = 0;
     switch(userBonus) {
         case 1:
         alert('Hah jokes on you I AM colorblind. I will eat all your points nom nom nom nom nom.');
@@ -237,4 +233,3 @@ if(userPoints > 0) {
     alert('Oh no! I stole your points away! It\'s okay ' + user + '. You still win. Nobody loses here!');
 }
 console.log('end of the javascript stuff');
-*/
