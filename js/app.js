@@ -3,13 +3,13 @@
 var userPoints = 0;
 var userBonus = 0;
 var userAttempts = 3;
-var question1, question2, question3, question4, question5, bonusQuestion;
-var questions = [];
+//var question1, question2, question3, question4, question5, bonusQuestion;
+var answers = [];
 
 
 console.log('User has connected to the site');
 alert('Come on, come all to my guess game crawl');
-console.log(questions);
+console.log(answers);
 
 var user = prompt('I\'d like to know your name!', 'type your name');
 console.log('user will now be referred to as ' + user);
@@ -21,21 +21,21 @@ alert('Here there will be a series of questions about me. Who am I? Well my name
 
 while( userAttempts > 0) {
 
-  questions.push(prompt('First Question: Am I a musician?', 'type yes or no').toLowerCase());
-  console.log(user + ' has answered ' + questions[0]);
+  answers.push(prompt('First Question: Am I a musician?', 'type yes or no').toLowerCase());
+  console.log(user + ' has answered ' + answers[0]);
 
-  if(questions[0] === 'yes' || questions[0] === 'y') {      
+  if(answers[0] === 'yes' || answers[0] === 'y') {      
     break;
   } else {
     userAttempts--;
     console.log(user + ' attempts left: ' + userAttempts);
     switch(userAttempts) {
     case 2:
-      questions.pop();
+      answers.pop();
       alert('Hmm, try again '+ user + '!');
       break;
     case 1:
-      questions.pop();
+      answers.pop();
       alert('Really...there are only two possible answers.');
       break;
     default:
@@ -45,7 +45,7 @@ while( userAttempts > 0) {
   }
 }
 
-if(questions[0] === 'yes' || questions[0] === 'y') {
+if(answers[0] === 'yes' || answers[0] === 'y') {
 
   alert('Hooray! You did it ' + user + '. I am in fact a musician! Originally I studied Classical Bassoon and Jazz Saxophone but now I just kinda play whatever I pick up when I need to do some sound design or composition! Enjoy your delicious point');
   userPoints++;
@@ -59,26 +59,26 @@ if(questions[0] === 'yes' || questions[0] === 'y') {
   console.log(user + ' attempts left: ' + userAttempts);
 }
 
-console.log(questions);
+console.log(answers);
 alert('Alright lets move on to the next question! Here we go!');
 
 while( userAttempts > 0) {
 
-  questions.push(prompt('Am I an incredibly geeky person? Yeah you probably don\'t know who I am so flip a coin. Coins are unbiased right?', 'type yes or no').toLowerCase());
-  console.log(user + ' has answered with ' + questions[1]);
+  answers.push(prompt('Am I an incredibly geeky person? Yeah you probably don\'t know who I am so flip a coin. Coins are unbiased right?', 'type yes or no').toLowerCase());
+  console.log(user + ' has answered with ' + answers[1]);
 
-  if(questions[1] === 'yes' || questions[1] === 'y') {
+  if(answers[1] === 'yes' || answers[1] === 'y') {
     break;
   } else {
     userAttempts--;
     console.log(user + ' attempts left: ' + userAttempts);
     switch(userAttempts) {
     case 2:
-      questions.pop();
+      answers.pop();
       alert('Naaaaaaaaaaaaaaaaah. '+ user + ' give it another go!');
       break;
     case 1:
-      questions.pop();
+      answers.pop();
       alert('Still trying to not answer huh');
       break;
     default:
@@ -88,7 +88,7 @@ while( userAttempts > 0) {
   }
 }
 
-if(questions[1] === 'yes' || questions[1] === 'y') {  
+if(answers[1] === 'yes' || answers[1] === 'y') {  
   alert('Yup you would be correct, or that coin was correct or however your preferred method of guessing...um...guessed. I come from a comic book family, playing board games, role playing, super heroes, sci-fi space western...you name it. It\'s a lot of fun to have an active imagination! Point for you!');
   userPoints++;
   userAttempts = 3;
@@ -101,7 +101,7 @@ if(questions[1] === 'yes' || questions[1] === 'y') {
   console.log(user + ' points: ' + userPoints);
   console.log(user + ' attempts left: ' + userAttempts);
 }
-console.log(questions);
+console.log(answers);
 
 /*
 alert('Cool feeling good? Sweet.');
