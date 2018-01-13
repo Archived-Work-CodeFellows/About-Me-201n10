@@ -9,6 +9,7 @@ var questions = [];
 
 console.log('User has connected to the site');
 alert('Come on, come all to my guess game crawl');
+console.log(questions);
 
 var user = prompt('I\'d like to know your name!', 'type your name');
 console.log('user will now be referred to as ' + user);
@@ -20,44 +21,46 @@ alert('Here there will be a series of questions about me. Who am I? Well my name
 
 while( userAttempts > 0) {
 
-    //question1 = prompt("First Question: Am I a musician?", 'type yes or no').toLowerCase();
-    questions.push(prompt("First Question: Am I a musician?", 'type yes or no').toLowerCase());
-    //console.log(user + ' has answered ' + question1);
-    console.log(user + ' has answered ' + questions[0]);
+  //question1 = prompt("First Question: Am I a musician?", 'type yes or no').toLowerCase();
+  questions.push(prompt('First Question: Am I a musician?', 'type yes or no').toLowerCase());
+  //console.log(user + ' has answered ' + question1);
+  console.log(user + ' has answered ' + questions[0]);
 
-    if(questions[0] === 'yes' || questions[0] === 'y') {
-        
-        break;
-    } else {
-        userAttempts--;
-        console.log(user + ' attempts left: ' + userAttempts);
-        switch(userAttempts) {
-            case 2:
-            alert('Hmm, try again '+ user + '!');
-            break;
-            case 1:
-            alert('Really...there are only two possible answers.');
-            break;
-            default:
-            alert('Lets just move on...');
-            break;
-        }
+  if(questions[0] === 'yes' || questions[0] === 'y') {      
+    break;
+  } else {
+    userAttempts--;
+    console.log(user + ' attempts left: ' + userAttempts);
+    switch(userAttempts) {
+    case 2:
+      questions.pop();
+      alert('Hmm, try again '+ user + '!');
+      break;
+    case 1:
+      questions.pop();
+      alert('Really...there are only two possible answers.');
+      break;
+    default:
+      alert('Lets just move on...');
+      break;
     }
+  }
 }
 
 if(questions[0] === 'yes' || questions[0] === 'y') {
 
-    alert('Hooray! You did it ' + user + '. I am in fact a musician! Originally I studied Classical Bassoon and Jazz Saxophone but now I just kinda play whatever I pick up when I need to do some sound design or composition! Enjoy your delicious point');
-    userPoints++;
-    userAttempts = 3;
-    console.log(user + ' points: ' + userPoints);
-    console.log(user + ' attempts left: ' + userAttempts);
-} else {
-    alert('Sorry you got this one wrong. I am a musician and originally studied Classical Bassoon and Jazz Saxophone. Now I just play whatever I pick up when I need to do sound design or compose. Hopefully you can guess better next time!');
-    userAttempts = 3;
-    console.log(user + ' points: ' + userPoints);
-    console.log(user + ' attempts left: ' + userAttempts);
+  alert('Hooray! You did it ' + user + '. I am in fact a musician! Originally I studied Classical Bassoon and Jazz Saxophone but now I just kinda play whatever I pick up when I need to do some sound design or composition! Enjoy your delicious point');
+  userPoints++;
+  userAttempts = 3;
+  console.log(user + ' points: ' + userPoints);
+  console.log(user + ' attempts left: ' + userAttempts);
+} else {    
+  alert('Sorry you got this one wrong. I am a musician and originally studied Classical Bassoon and Jazz Saxophone. Now I just play whatever I pick up when I need to do sound design or compose. Hopefully you can guess better next time!');
+  userAttempts = 3;
+  console.log(user + ' points: ' + userPoints);
+  console.log(user + ' attempts left: ' + userAttempts);
 }
+console.log(questions);
 /*
 alert('Alright lets move on to the next question! Here we go!');
 while( userAttempts > 0) {
