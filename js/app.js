@@ -1,9 +1,10 @@
 'use strict';
-//test change
+
 var userPoints = 0;
 var userBonus = 0;
 var userAttempts = 3;
 var question1, question2, question3, question4, question5, bonusQuestion;
+var questions = [];
 
 
 console.log('User has connected to the site');
@@ -19,10 +20,12 @@ alert('Here there will be a series of questions about me. Who am I? Well my name
 
 while( userAttempts > 0) {
 
-    question1 = prompt("First Question: Am I a musician?", 'type yes or no').toLowerCase();
-    console.log(user + ' has answered ' + question1);
+    //question1 = prompt("First Question: Am I a musician?", 'type yes or no').toLowerCase();
+    questions.push(prompt("First Question: Am I a musician?", 'type yes or no').toLowerCase());
+    //console.log(user + ' has answered ' + question1);
+    console.log(user + ' has answered ' + questions[0]);
 
-    if(question1 === 'yes' || question1 === 'y') {
+    if(questions[0] === 'yes' || questions[0] === 'y') {
         
         break;
     } else {
@@ -42,7 +45,7 @@ while( userAttempts > 0) {
     }
 }
 
-if(question1 === 'yes' || question1 === 'y') {
+if(questions[0] === 'yes' || questions[0] === 'y') {
 
     alert('Hooray! You did it ' + user + '. I am in fact a musician! Originally I studied Classical Bassoon and Jazz Saxophone but now I just kinda play whatever I pick up when I need to do some sound design or composition! Enjoy your delicious point');
     userPoints++;
@@ -55,7 +58,7 @@ if(question1 === 'yes' || question1 === 'y') {
     console.log(user + ' points: ' + userPoints);
     console.log(user + ' attempts left: ' + userAttempts);
 }
-
+/*
 alert('Alright lets move on to the next question! Here we go!');
 while( userAttempts > 0) {
 
@@ -220,15 +223,17 @@ if(question5 === 'yes' || question5 === 'y') {
     }
 }
 
-console.log('end of the game');
-alert('Hope you enjoyed this javascript guessing game and learned something     about me! Lets see where you ended up with points!');
-var finalScore = userPoints + userBonus;
-console.log('add user points and bonus points');
-console.log(finalScore);
+*/
 
-if(finalScore > 0) {
-    alert(user + ' you ended with a final score of ' + finalScore + '. You win! Anything above 0 wins!!!!');
-} else {
-    alert('Oh no! I stole your points away! It\'s okay ' + user + '. You still win. Nobody loses here!');
-}
-console.log('end of the javascript stuff');
+
+// alert('Hope you enjoyed this javascript guessing game and learned something     about me! Lets see where you ended up with points!');
+// var finalScore = userPoints + userBonus;
+// console.log('add user points and bonus points');
+// console.log(finalScore);
+
+// if(finalScore > 0) {
+//     alert(user + ' you ended with a final score of ' + finalScore + '. You win! Anything above 0 wins!!!!');
+// } else {
+//     alert('Oh no! I stole your points away! It\'s okay ' + user + '. You still win. Nobody loses here!');
+// }
+// console.log('end of the javascript stuff');
