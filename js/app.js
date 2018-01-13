@@ -173,6 +173,7 @@ while( userAttempts > 0) {
             break;
             default:
             alert('404');
+            console.log('faking a broken script');
             break;
         }
     }
@@ -189,8 +190,8 @@ if(question4 === 'no' || question4 === 'n') {
 } else {
 
     userAttempts = 3;
-    alert('mmmm yessssss I will take over the world with my lazer sharks. Nothing can save you now!');
-    alert('Nah I am kidding, that is a lot of work for a javascript alert to do');
+    //alert('mmmm yessssss I will take over the world with my lazer sharks. Nothing can save you now!');
+    //alert('Nah I am kidding, that is a lot of work for a javascript alert to do');
     console.log(user + ' points: ' + userPoints);
     console.log(user + ' attempts left: ' + userAttempts);
 }
@@ -223,7 +224,7 @@ console.log('end of the game');
 alert('Hope you enjoyed this javascript guessing game and learned something     about me! Lets see where you ended up with points!');
 var finalScore = userPoints + userBonus;
 console.log('add user points and bonus points');
-consol.log(finalScore);
+console.log(finalScore);
 
 if(finalScore > 0) {
     alert(user + ' you ended with a final score of ' + finalScore + '. You win! Anything above 0 wins!!!!');
