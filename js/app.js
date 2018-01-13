@@ -155,49 +155,52 @@ if(answers[2] === 'yes' || answers[2] === 'y') {
   console.log(user + ' attempts left: ' + userAttempts);
 }
 
-/*
+console.log(answers);
+
 while( userAttempts > 0) {
 
-   question4 = prompt('Curveball! Am I a super secret ninja plotting to take over the world??').toLowerCase();
-   console.log(user + ' has answered with ' + question4);
+  answers.push(prompt('Curveball! Am I a super secret ninja plotting to take over the world??').toLowerCase());
+  console.log(user + ' has answered with ' + answers[3]);
 
-    if(question4 === 'no' || question4 === 'n') {
-        
-        break;
-    } else {
-        userAttempts--;
-        console.log(user + ' attempts left: ' + userAttempts);
-        switch(userAttempts) {
-            case 2:
-            alert('Hmm, try again '+ user + '!');
-            break;
-            case 1:
-            alert('***RECYCLING MESSAGE***INSERT SOMETHING WITTY***');
-            break;
-            default:
-            alert('404');
-            console.log('faking a broken script');
-            break;
-        }
+  if(answers[3] === 'no' || answers[3] === 'n') {      
+    break;
+  } else {
+    userAttempts--;
+    console.log(user + ' attempts left: ' + userAttempts);
+    switch(userAttempts) {
+    case 2:
+      answers.pop();
+      alert('Hmm, try again '+ user + '!');
+      break;
+    case 1:
+      answers.pop();
+      alert('***RECYCLING MESSAGE***INSERT SOMETHING WITTY***');
+      break;
+    default:
+      alert('404');
+      console.log('faking a broken script');
+      break;
     }
+  }
 }
 
-if(question4 === 'no' || question4 === 'n') {
-    
-    alert('well ' + user + ', I guess that wasn\'t much of a curveball huh...fine here is your point. I may not be a ninja but along side my Tai Chi instructor Certificate, I have taken Kung Fu, Muay Tai kickboxing, Savant Kickboxing and Jeet Kune Do. I like hitting things what can I say!');
-    userPoints++;
-    userAttempts = 3;
-    console.log(user + ' points: ' + userPoints);
-    console.log(user + ' attempts left: ' + userAttempts);
+if(answers[3] === 'no' || answers[3] === 'n') {
+  alert('well ' + user + ', I guess that wasn\'t much of a curveball huh...fine here is your point. I may not be a ninja but along side my Tai Chi instructor Certificate, I have taken Kung Fu, Muay Tai kickboxing, Savant Kickboxing and Jeet Kune Do. I like hitting things what can I say!');
+  userPoints++;
+  userAttempts = 3;
+  console.log(user + ' points: ' + userPoints);
+  console.log(user + ' attempts left: ' + userAttempts);
 
 } else {
 
-    userAttempts = 3;
-    //alert('mmmm yessssss I will take over the world with my lazer sharks. Nothing can save you now!');
-    //alert('Nah I am kidding, that is a lot of work for a javascript alert to do');
-    console.log(user + ' points: ' + userPoints);
-    console.log(user + ' attempts left: ' + userAttempts);
+  userAttempts = 3;
+  console.log(user + ' points: ' + userPoints);
+  console.log(user + ' attempts left: ' + userAttempts);
 }
+
+console.log(answers);
+
+/*
 
 alert('Alright ' + user + ', Everything is on this last question. Everything before means nothing now. All your points are belong to me!');
 alert('If you get this question right, you win. If you get it wrong, well you don\'t win.');
