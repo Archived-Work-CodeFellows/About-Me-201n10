@@ -200,34 +200,30 @@ if(answers[3] === 'no' || answers[3] === 'n') {
 
 console.log(answers);
 
-/*
-
 alert('Alright ' + user + ', Everything is on this last question. Everything before means nothing now. All your points are belong to me!');
 alert('If you get this question right, you win. If you get it wrong, well you don\'t win.');
-question5 = prompt('Am I colorblind?', 'type yes or no').toLowerCase();
-console.log(user + ' has answered ' + question5);
+answers[4] = prompt('Am I colorblind?', 'type yes or no').toLowerCase();
+console.log(user + ' has answered ' + answers[4]);
 
-if(question5 === 'yes' || question5 === 'y') {
-    
-    userPoints++;
-    alert('Wow ' + user + '! Either you know me pretty well or that was a good guess! (probably a guess cause well...this is a guessing game)');
-    console.log(user + ' points: ' + userPoints);
+if(answers[4] === 'yes' || answers[4] === 'y') {   
+  userPoints++;
+  alert('Wow ' + user + '! Either you know me pretty well or that was a good guess! (probably a guess cause well...this is a guessing game)');
+  console.log(user + ' points: ' + userPoints);
 } else {
-    userPoints = 0;
-    switch(userBonus) {
-        case 1:
-        alert('Hah jokes on you I AM colorblind. I will eat all your points nom nom nom nom nom.');
-        alert('NOOOOOO you\'ve foiled me! How could I forget about the bonus point! Nothing beats the bonus point! Curses! Well I guess you still have some points left!');
-        break;
-        default:
-        alert('Nope, I am definitely colorblind. It\'s a really interesting conversation to have!');
-        alert('Hah, you have nothing. I took everything. I am the better guesserer about myself. So what if I cheated and made the program this way. I typed it');
-        break;
-    }
+  userPoints = 0;
+  switch(userBonus) {
+  case 1:
+    alert('Hah jokes on you I AM colorblind. I will eat all your points nom nom nom nom nom.');
+    alert('NOOOOOO you\'ve foiled me! How could I forget about the bonus point! Nothing beats the bonus point! Curses! Well I guess you still have some points left!');
+    break;
+  default:
+    alert('Nope, I am definitely colorblind. It\'s a really interesting conversation to have!');
+    alert('Hah, you have nothing. I took everything. I am the better guesserer about myself. So what if I cheated and made the program this way. I typed it');
+    break;
+  }
 }
 
-*/
-
+console.log(answers);
 
 // alert('Hope you enjoyed this javascript guessing game and learned something     about me! Lets see where you ended up with points!');
 // var finalScore = userPoints + userBonus;
