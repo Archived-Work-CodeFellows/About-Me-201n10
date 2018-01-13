@@ -70,13 +70,13 @@ while( userAttempts > 0) {
         console.log(user + ' attempts left: ' + userAttempts);
         switch(userAttempts) {
             case 2:
-            alert('Hmm, try again '+ user + '!');
+            alert('Naaaaaaaaaaaaaaaaah. '+ user + ' give it another go!');
             break;
             case 1:
-            alert('Really...there are only two possible answers.');
+            alert('Still trying to not answer huh');
             break;
             default:
-            alert('Lets just move on...');
+            alert('That\'s cool. I\'ll just move the script along');
             break;
         }
     }
@@ -92,8 +92,8 @@ if(question2 === 'yes' || question2 === 'y') {
 } else {
 
     userAttempts = 3;
-    alert('attempts all gone, it\'s okay. I will give you more so you can play!');
     alert('hmm, that wasn\'t a super fair question. Plus it was out of the blue and a lot of pressure to just judge something pretty random. I\'m sorry. So get ready for another one!');
+    alert('attempts all gone, it\'s okay. I will give you more so you can play!');
     console.log(user + ' points: ' + userPoints);
     console.log(user + ' attempts left: ' + userAttempts);
 }
@@ -113,13 +113,13 @@ while( userAttempts > 0) {
         console.log(user + ' attempts left: ' + userAttempts);
         switch(userAttempts) {
             case 2:
-            alert('Hmm, try again '+ user + '!');
+            alert('Nope!');
             break;
             case 1:
-            alert('Really...there are only two possible answers.');
+            alert('Sigh...I have to type it since I can\'t convey it with audio yet');
             break;
             default:
-            alert('Lets just move on...');
+            alert('do do doooo do doo...oh? Still didn\'t answer? Alrighty moving forward!');
             break;
         }
     }
@@ -147,8 +147,8 @@ if(question3 === 'yes' || question3 === 'y') {
 } else {
 
     userAttempts = 3;
-    alerts('attempts all gone, it\'s okay. I will give you more so you can play!');
     alert('hmm, nope! I do have a younger brother who is finishing up his third year in college');
+    alert('resetting attempts....loading');
     console.log(user + ' points: ' + userPoints);
     console.log(user + ' attempts left: ' + userAttempts);
 }
@@ -169,10 +169,10 @@ while( userAttempts > 0) {
             alert('Hmm, try again '+ user + '!');
             break;
             case 1:
-            alert('Really...there are only two possible answers.');
+            alert('***RECYCLING MESSAGE***INSERT SOMETHING WITTY***');
             break;
             default:
-            alert('Lets just move on...');
+            alert('404');
             break;
         }
     }
