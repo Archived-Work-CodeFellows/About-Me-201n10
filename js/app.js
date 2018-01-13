@@ -95,6 +95,61 @@ if(question2 === 'yes' || question2 === 'y') {
 } else {
 
     userAttempts = 3;
+    alert('attempts all gone, it\'s okay. I will give you more so you can play!');
+    alert('hmm, that wasn\'t a super fair question. Plus it was out of the blue and a lot of pressure to just judge something pretty random. I\'m sorry. So get ready for another one!');
+    console.log(user + ' points: ' + userPoints);
+    console.log(user + ' attempts left: ' + userAttempts);
+}
+
+
+alert('Cool feeling good? Sweet.');
+while( userAttempts > 0) {
+
+   question3 = prompt('Do I have any siblings?', 'type yes or no').toLowerCase();
+   console.log(user + ' has answered with ' + question3);
+
+    if(question3 === 'yes' || question3 === 'y') {
+        
+        break;
+    } else {
+        userAttempts--;
+        console.log(user + ' attempts left: ' + userAttempts);
+        switch(userAttempts) {
+            case 2:
+            alert('Hmm, try again '+ user + '!');
+            break;
+            case 1:
+            alert('Really...there are only two possible answers.');
+            break;
+            default:
+            alert('Lets just move on...');
+            break;
+        }
+    }
+}
+
+if(question3 === 'yes' || question3 === 'y') {
+    
+    alert('You got it! I have one younger brother who is currently finishing up his third year of college.');
+    userPoints++;
+    userAttempts = 3;
+    console.log(user + ' points: ' + userPoints);
+    console.log(user + ' attempts left: ' + userAttempts);
+    bonusQuestion = prompt('pssssssssssst....hey ' + user + '! Wanna get a bonus point?', 'type yes or no').toLowerCase();
+    console.log(user + ' answered ' + bonusQuestion);
+    if(bonusQuestion === 'yes' || bonusQuestion === 'y') {
+        userBonus++;
+        alert('That was it! You did it ' + user + '! Enjoy free stuff!');
+        console.log(user + ' points: '  + userPoints + ' bonus points: ' + userBonus);
+    } else {
+        userAttempts = 3;
+        alert('Oh that is cool too. Yeah I don\'t need bonus points either. Just asking for a friend');
+        console.log(user + ' points: ' + userPoints);
+        console.log(user + ' attempts left: ' + userAttempts);
+    }
+} else {
+
+    userAttempts = 3;
     alerts('attempts all gone, it\'s okay. I will give you more so you can play!');
     alert('hmm, that wasn\'t a super fair question. Plus it was out of the blue and a lot of pressure to just judge something pretty random. I\'m sorry. So get ready for another one!');
     console.log(user + ' points: ' + userPoints);
@@ -102,33 +157,6 @@ if(question2 === 'yes' || question2 === 'y') {
 }
 
 /*
-
-alert('Cool feeling good? Sweet.');
-var question3 = prompt('Do I have any siblings?', 'type yes or no').toLowerCase();
-console.log(user + ' has answered with ' + question3);
-
-if(question3 === 'yes' || question3 === 'yes') {
-
-    userPoints++;
-    alert('You got it! I have one younger brother who is currently finishing up his third year of college.');
-    console.log(user + ' now has ' + userPoints + ' points');
-    var bonusQuestion = prompt('pssssssssssst....hey ' + user + '! Wanna get a bonus point?', 'type yes or no').toLowerCase();
-    console.log(user + ' answered ' + bonusQuestion);
-    if(bonusQuestion === 'yes' || bonusQuestion === 'y') {
-        userBonus++;
-        alert('That was it! You did it ' + user + '! Enjoy free stuff!');
-        console.log(user + ' has ' + userPoints + ' points and ' + userBonus + ' bonus points.');
-    } else {
-        alert('Oh that is cool too. Yeah I don\'t need bonus points either. Just asking for a friend');
-        console.log(user + ' has ' + userPoints + ' points');
-    }
-} else {
-
-    alert('Nope you got that one wrong. I do have one sibiling and that is a younger brother who is in the process of finishing his third year in college.');
-    console.log(user + ' has ' + userPoints + ' points');
-
-}
-
 var question4 = prompt('Curveball! Am I a super secret ninja plotting to take over the world??').toLowerCase();
 console.log(user + ' has answered ' + question4);
 
