@@ -17,9 +17,6 @@ console.log(user + ' attempts left: ' + userAttempts);
 alert('Welcome ' + user + '! I hope you are ready to play a game.');
 alert('Here there will be a series of questions about me. Who am I? Well my name is Eric. Good luck ' + user + '!');
 
-//var question1 = prompt("First Question: Am I a musician?", 'type yes or no').toLowerCase();
-//console.log(user + ' has answered ' + question1);
-
 while( userAttempts > 0) {
 
     question1 = prompt("First Question: Am I a musician?", 'type yes or no').toLowerCase();
@@ -151,7 +148,7 @@ if(question3 === 'yes' || question3 === 'y') {
 
     userAttempts = 3;
     alerts('attempts all gone, it\'s okay. I will give you more so you can play!');
-    alert('hmm, that wasn\'t a super fair question. Plus it was out of the blue and a lot of pressure to just judge something pretty random. I\'m sorry. So get ready for another one!');
+    alert('hmm, nope! I do have a younger brother who is finishing up his third year in college');
     console.log(user + ' points: ' + userPoints);
     console.log(user + ' attempts left: ' + userAttempts);
 }
@@ -198,7 +195,7 @@ if(question4 === 'no' || question4 === 'n') {
     console.log(user + ' attempts left: ' + userAttempts);
 }
 
-alert('Alright ' + user + ', Everything is on this last question. Everything before means nothing now. All your points belong to me!');
+alert('Alright ' + user + ', Everything is on this last question. Everything before means nothing now. All your points are belong to me!');
 alert('If you get this question right, you win. If you get it wrong, well you don\'t win.');
 question5 = prompt('Am I colorblind?', 'type yes or no').toLowerCase();
 console.log(user + ' has answered ' + question5);
@@ -227,7 +224,7 @@ alert('Hope you enjoyed this javascript guessing game and learned something     
 var finalScore = userPoints + userBonus;
 console.log('add user points and bonus points');
 
-if(userPoints > 0) {
+if(finalScore > 0) {
     alert(user + ' you ended with a final score of ' + finalScore + '. You win! Anything above 0 wins!!!!');
 } else {
     alert('Oh no! I stole your points away! It\'s okay ' + user + '. You still win. Nobody loses here!');
