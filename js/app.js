@@ -21,9 +21,7 @@ alert('Here there will be a series of questions about me. Who am I? Well my name
 
 while( userAttempts > 0) {
 
-  //question1 = prompt("First Question: Am I a musician?", 'type yes or no').toLowerCase();
   questions.push(prompt('First Question: Am I a musician?', 'type yes or no').toLowerCase());
-  //console.log(user + ' has answered ' + question1);
   console.log(user + ' has answered ' + questions[0]);
 
   if(questions[0] === 'yes' || questions[0] === 'y') {      
@@ -54,57 +52,58 @@ if(questions[0] === 'yes' || questions[0] === 'y') {
   userAttempts = 3;
   console.log(user + ' points: ' + userPoints);
   console.log(user + ' attempts left: ' + userAttempts);
-} else {    
+} else {
   alert('Sorry you got this one wrong. I am a musician and originally studied Classical Bassoon and Jazz Saxophone. Now I just play whatever I pick up when I need to do sound design or compose. Hopefully you can guess better next time!');
   userAttempts = 3;
   console.log(user + ' points: ' + userPoints);
   console.log(user + ' attempts left: ' + userAttempts);
 }
+
 console.log(questions);
-/*
 alert('Alright lets move on to the next question! Here we go!');
+
 while( userAttempts > 0) {
 
-   question2 = prompt('Am I an incredibly geeky person? Yeah you probably don\'t know who I am so flip a coin. Coins are unbiased right?', 'type yes or no').toLowerCase();
-   console.log(user +  ' has answered with ' + question2);
+  questions.push(prompt('Am I an incredibly geeky person? Yeah you probably don\'t know who I am so flip a coin. Coins are unbiased right?', 'type yes or no').toLowerCase());
+  console.log(user + ' has answered with ' + questions[1]);
 
-    if(question2 === 'yes' || question2 === 'y') {
-        
-        break;
-    } else {
-        userAttempts--;
-        console.log(user + ' attempts left: ' + userAttempts);
-        switch(userAttempts) {
-            case 2:
-            alert('Naaaaaaaaaaaaaaaaah. '+ user + ' give it another go!');
-            break;
-            case 1:
-            alert('Still trying to not answer huh');
-            break;
-            default:
-            alert('That\'s cool. I\'ll just move the script along');
-            break;
-        }
+  if(questions[1] === 'yes' || questions[1] === 'y') {
+    break;
+  } else {
+    userAttempts--;
+    console.log(user + ' attempts left: ' + userAttempts);
+    switch(userAttempts) {
+    case 2:
+      questions.pop();
+      alert('Naaaaaaaaaaaaaaaaah. '+ user + ' give it another go!');
+      break;
+    case 1:
+      questions.pop();
+      alert('Still trying to not answer huh');
+      break;
+    default:
+      alert('That\'s cool. I\'ll just move the script along');
+      break;
     }
+  }
 }
 
-if(question2 === 'yes' || question2 === 'y') {
-    
-    alert('Yup you would be correct, or that coin was correct or however your preferred method of guessing...um...guessed. I come from a comic book family, playing board games, role playing, super heroes, sci-fi space western...you name it. It\'s a lot of fun to have an active imagination! Point for you!');
-    userPoints++;
-    userAttempts = 3;
-    console.log(user + ' points: ' + userPoints);
-    console.log(user + ' attempts left: ' + userAttempts);
+if(questions[1] === 'yes' || questions[1] === 'y') {  
+  alert('Yup you would be correct, or that coin was correct or however your preferred method of guessing...um...guessed. I come from a comic book family, playing board games, role playing, super heroes, sci-fi space western...you name it. It\'s a lot of fun to have an active imagination! Point for you!');
+  userPoints++;
+  userAttempts = 3;
+  console.log(user + ' points: ' + userPoints);
+  console.log(user + ' attempts left: ' + userAttempts);
 } else {
-
-    userAttempts = 3;
-    alert('hmm, that wasn\'t a super fair question. Plus it was out of the blue and a lot of pressure to just judge something pretty random. I\'m sorry. So get ready for another one!');
-    alert('attempts all gone, it\'s okay. I will give you more so you can play!');
-    console.log(user + ' points: ' + userPoints);
-    console.log(user + ' attempts left: ' + userAttempts);
+  userAttempts = 3;
+  alert('hmm, that wasn\'t a super fair question. Plus it was out of the blue and a lot of pressure to just judge something pretty random. I\'m sorry. So get ready for another one!');
+  alert('attempts all gone, it\'s okay. I will give you more so you can play!');
+  console.log(user + ' points: ' + userPoints);
+  console.log(user + ' attempts left: ' + userAttempts);
 }
+console.log(questions);
 
-
+/*
 alert('Cool feeling good? Sweet.');
 while( userAttempts > 0) {
 
@@ -159,6 +158,7 @@ if(question3 === 'yes' || question3 === 'y') {
     console.log(user + ' attempts left: ' + userAttempts);
 }
 
+/*
 while( userAttempts > 0) {
 
    question4 = prompt('Curveball! Am I a super secret ninja plotting to take over the world??').toLowerCase();
