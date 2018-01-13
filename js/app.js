@@ -18,7 +18,8 @@ console.log(user + ' attempts left: ' + userAttempts);
 
 alert('Welcome ' + user + '! I hope you are ready to play a game.');
 alert('Here there will be a series of questions about me. Who am I? Well my name is Eric. Good luck ' + user + '!');
-
+userAttempts = 4;
+/*
 userAttempts = 3;
 
 while(userAttempts > 0) {
@@ -186,6 +187,7 @@ while( userAttempts > 0) {
   }
 }
 
+console.log('set userAttempts for the 6th question');
 userAttempts = 4;
 
 if(answers[3] === 'no' || answers[3] === 'n') {
@@ -224,7 +226,73 @@ if(answers[4] === 'yes' || answers[4] === 'y') {
   }
 }
 
+console.log(answers); */
+
+alert('Alright ' + user + ', I kinda lied. I added more but I really wanted to keep that sense of misdirection. Here comes a guessing game, inside of a guessing game! We call it....guess-ception');
+
+while (userAttempts > 0) {
+
+  var number = '26';
+  var guess = prompt('Guess what number I was thinking at the time I was writing this script! I\'ll give you a hit, the number is between 10 and 40. You have ' + userAttempts + '!');
+  var compare = '';
+  console.log(guess);
+  if(isNaN(guess) === true) {
+    alert('OH looks like you didn\'t type a number. I only accept integers!');
+  } else {
+    if(guess === number) {
+      answers.push(guess);
+      break;
+    } else {
+      userAttempts--;
+      switch(userAttempts) {
+      case 3:
+        if(guess > 26) {
+          alert('Good number but you are too high');
+        } else {
+          alert('Good number, but you are too low');
+        }
+        compare = guess;
+        break;
+      case 2:
+        if(guess > 26 && guess < compare) {
+          alert('Oh man looks like you are getting closer!');
+        } else if (guess < 26 && guess > compare) {
+          alert('Oh man you are getting closer!');
+        } else if (guess < 26 && guess < compare) {
+          alert('Oh you overshot and went too low!');
+        } else {
+          alert('Went to high up! Try again!');
+        }
+        compare = guess;
+        break;
+      case 1:
+        if(guess > 26 && guess < compare) {
+          alert('Oh man looks like you are getting closer!');
+        } else if (guess < 26 && guess > compare) {
+          alert('Oh man you are getting closer!');
+        } else if (guess < 26 && guess < compare) {
+          alert('Oh you overshot and went too low!');
+        } else {
+          alert('You are still too high!');
+        }
+        break;
+      default:
+        alert('Oh no, you are all out of attempts! Good effort though!');
+        break;
+      }
+    }
+  }
+}
 console.log(answers);
+userAttempts = 6;
+
+if(answers[5] === '26') {
+  userPoints++;
+  alert('Woo you guessed it right! I picked 26 because my birthday is at the end of the month and that is how old I will be!');
+} else {
+  alert('Nice try ' + user + '! The number is actually 26. I turn 26 at the end of the month!');
+}
+
 
 // alert('Hope you enjoyed this javascript guessing game and learned something     about me! Lets see where you ended up with points!');
 // var finalScore = userPoints + userBonus;
