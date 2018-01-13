@@ -2,18 +2,36 @@
     font-family: Arial, Helvetica, sans-serif;
 
 }
-td {
-    border: 1 px solid #000000
-    padding: 10px;
-}
 .titles {
 
     text-align: center;
     color: blue
 
 }
-.info {
 
+#container {
+    width: 80%;
+    height: 200px;
+    background: aqua;
+    margin: auto;
+    padding: 10px;
+
+}
+
+#boxOne {
+    width: 25%;
+    height: 50%;
+    border: 1px solid green;
+    margin: auto;
+    float: left;
+    overflow: hidden;
+}
+#boxTwo {
+    width: 25%;
+    height: 50%;
+    border: 1px solid rgb(255, 102, 0);
+    float: left;
+    margin: auto;
+    overflow: hidden;
     
-
 }
