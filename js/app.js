@@ -3,7 +3,7 @@
 var userPoints = 0;
 var userBonus = 0;
 var userAttempts = 3;
-//var question1, question2, question3, question4, question5, bonusQuestion;
+var bonusQuestion;
 var answers = [];
 
 
@@ -103,59 +103,56 @@ if(answers[1] === 'yes' || answers[1] === 'y') {
 }
 console.log(answers);
 
-/*
 alert('Cool feeling good? Sweet.');
 while( userAttempts > 0) {
 
-   question3 = prompt('Do I have any siblings?', 'type yes or no').toLowerCase();
-   console.log(user + ' has answered with ' + question3);
-
-    if(question3 === 'yes' || question3 === 'y') {
-        
-        break;
-    } else {
-        userAttempts--;
-        console.log(user + ' attempts left: ' + userAttempts);
-        switch(userAttempts) {
-            case 2:
-            alert('Nope!');
-            break;
-            case 1:
-            alert('Sigh...I have to type it since I can\'t convey it with audio yet');
-            break;
-            default:
-            alert('do do doooo do doo...oh? Still didn\'t answer? Alrighty moving forward!');
-            break;
-        }
+  answers.push(prompt('Do I have any siblings?', 'type yes or no').toLowerCase());
+  console.log(user + ' has answered with ' + answers[2]);  
+  if(answers[2] === 'yes' || answers[2] === 'y') {
+    break;
+  } else {
+    userAttempts--;
+    console.log(user + ' attempts left: ' + userAttempts);
+    switch(userAttempts) {
+    case 2:
+      answers.pop();
+      alert('Nope!');
+      break;
+    case 1:
+      answers.pop();
+      alert('Sigh...I have to type it since I can\'t convey it with audio yet');
+      break;
+    default:
+      alert('do do doooo do doo...oh? Still didn\'t answer? Alrighty moving forward!');
+      break;
     }
+  }
 }
 
-if(question3 === 'yes' || question3 === 'y') {
-    
-    alert('You got it! I have one younger brother who is currently finishing up his third year of college.');
-    userPoints++;
-    userAttempts = 3;
-    console.log(user + ' points: ' + userPoints);
-    console.log(user + ' attempts left: ' + userAttempts);
-    bonusQuestion = prompt('pssssssssssst....hey ' + user + '! Wanna get a bonus point?', 'type yes or no').toLowerCase();
-    console.log(user + ' answered ' + bonusQuestion);
-    if(bonusQuestion === 'yes' || bonusQuestion === 'y') {
-        userBonus++;
-        alert('That was it! You did it ' + user + '! Enjoy free stuff!');
-        console.log(user + ' points: '  + userPoints + ' bonus points: ' + userBonus);
-    } else {
-        userAttempts = 3;
-        alert('Oh that is cool too. Yeah I don\'t need bonus points either. Just asking for a friend');
-        console.log(user + ' points: ' + userPoints);
-        console.log(user + ' attempts left: ' + userAttempts);
-    }
-} else {
+if(answers[2] === 'yes' || answers[2] === 'y') {
 
-    userAttempts = 3;
-    alert('hmm, nope! I do have a younger brother who is finishing up his third year in college');
-    alert('resetting attempts....loading');
+  alert('You got it! I have one younger brother who is currently finishing up his third year of college.');
+  userPoints++;
+  userAttempts = 3;
+  console.log(user + ' points: ' + userPoints);
+  console.log(user + ' attempts left: ' + userAttempts);
+  bonusQuestion = prompt('pssssssssssst....hey ' + user + '! Wanna get a bonus point?', 'type yes or no').toLowerCase();
+  console.log(user + ' answered ' + bonusQuestion);
+  if(bonusQuestion === 'yes' || bonusQuestion === 'y') {
+    userBonus++;
+    alert('That was it! You did it ' + user + '! Enjoy free stuff!');
+    console.log(user + ' points: '  + userPoints + ' bonus points: ' + userBonus);
+  } else {
+    alert('Oh that is cool too. Yeah I don\'t need bonus points either. Just asking for a friend');
     console.log(user + ' points: ' + userPoints);
     console.log(user + ' attempts left: ' + userAttempts);
+  }
+} else {
+  userAttempts = 3;
+  alert('hmm, nope! I do have a younger brother who is finishing up his third year in college');
+  alert('resetting attempts....loading');
+  console.log(user + ' points: ' + userPoints);
+  console.log(user + ' attempts left: ' + userAttempts);
 }
 
 /*
