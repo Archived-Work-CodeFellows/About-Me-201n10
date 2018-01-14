@@ -14,7 +14,7 @@
     width: 40%;
     height: 300px;
     margin: auto;
-    padding: 10px;
+    padding: 5px;
     
 }
 #label {
@@ -42,7 +42,7 @@
 }
 #boxOne {
 
-    width: 50%;
+    width: 49%;
     height: 300px;
     background-color: dodgerblue;
     float: left;
@@ -50,12 +50,20 @@
 }
 #boxTwo {
 
-    width: 50%;
+    width: 49%;
     height: 300px;
     background-color: fuchsia;
     float: right;
     overflow: hidden;
     
+}
+
+#boxThree {
+
+    width: 100%;
+    height: 165px;
+    background-color: rgb(228, 33, 228);
+    overflow: hidden;
 }
 .listOne {
 
@@ -64,4 +72,17 @@
 .listTwo {
 
     background-color: fuchsia;
+}
+
+aside {
+    display: block;
+    float: right;
+    clear: left;
+
+}
+
+h4, p {
+
+    text-align: center;
+    background-color: rgb(228, 33, 228);
 }
