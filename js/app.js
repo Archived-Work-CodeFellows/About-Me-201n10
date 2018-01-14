@@ -5,6 +5,7 @@ var userBonus = 0;
 var userAttempts;
 var bonusQuestion;
 var answers = [];
+var music = ['bassoon', 'saxophone', 'guitar', 'piano'];
 
 
 console.log('User has connected to the site');
@@ -18,8 +19,7 @@ console.log(user + ' attempts left: ' + userAttempts);
 
 alert('Welcome ' + user + '! I hope you are ready to play a game.');
 alert('Here there will be a series of questions about me. Who am I? Well my name is Eric. Good luck ' + user + '!');
-userAttempts = 4;
-/*
+
 userAttempts = 3;
 
 while(userAttempts > 0) {
@@ -213,7 +213,6 @@ if(answers[4] === 'yes' || answers[4] === 'y') {
   alert('Wow ' + user + '! Either you know me pretty well or that was a good guess! (probably a guess cause well...this is a guessing game)');
   console.log(user + ' points: ' + userPoints);
 } else {
-  userPoints = 0;
   switch(userBonus) {
   case 1:
     alert('Hah jokes on you I AM colorblind. I will eat all your points nom nom nom nom nom.');
@@ -226,7 +225,7 @@ if(answers[4] === 'yes' || answers[4] === 'y') {
   }
 }
 
-console.log(answers); */
+console.log(answers);
 
 alert('Alright ' + user + ', I kinda lied. I added more but I really wanted to keep that sense of misdirection. Here comes a guessing game, inside of a guessing game! We call it....guess-ception');
 
@@ -277,6 +276,7 @@ while (userAttempts > 0) {
         }
         break;
       default:
+        answers.push(guess);
         alert('Oh no, you are all out of attempts! Good effort though!');
         break;
       }
@@ -293,15 +293,57 @@ if(answers[5] === '26') {
   alert('Nice try ' + user + '! The number is actually 26. I turn 26 at the end of the month!');
 }
 
+userAttempts = 6;
 
-// alert('Hope you enjoyed this javascript guessing game and learned something     about me! Lets see where you ended up with points!');
-// var finalScore = userPoints + userBonus;
-// console.log('add user points and bonus points');
-// console.log(finalScore);
+alert('Alright ' + user + ' now we are on the last question.');
+alert('I mentioned earlier in the game that I am a musician. I also compose music and do sound design for various projects in my spare time!');
 
-// if(finalScore > 0) {
-//     alert(user + ' you ended with a final score of ' + finalScore + '. You win! Anything above 0 wins!!!!');
-// } else {
-//     alert('Oh no! I stole your points away! It\'s okay ' + user + '. You still win. Nobody loses here!');
-// }
-// console.log('end of the javascript stuff');
+while(userAttempts > 0) {
+  var guess2 = prompt('What instruments do I play? There are multiple answers possible!').toLowerCase();
+  for(var i = 0; i < music.length; i++){
+    music[i];
+    if(guess2 === music[i]) {
+      alert('you did it!');
+      answers.push();
+      userAttempts = 0;
+      userPoints++;
+      break;
+    }
+  }
+  if(guess2 !== 'bassoon' || guess2 !== 'saxophone' || guess2 !== 'guitar' || guess2 !== 'piano'){
+    userAttempts--;
+    switch(userAttempts) {
+    case 5:
+      alert('Nope try again! Attempts remaining: ' + userAttempts);
+      break;
+    case 4:
+      alert('Keep trying! I believe in you! Attempts remaining: ' + userAttempts);
+      break;
+    case 3:
+      alert('Here is a hint: I said two of them in a previous question! Attempts remaining: ' + userAttempts);
+      break;
+    case 2:
+      alert('Keep on keeping on! Attempts remaining: ' + userAttempts);
+      break;
+    case 1:
+      alert('Nooooooooooooooooooooooooo almost out of timmmmmeeeee! Attempts remaining: ' + userAttempts);
+      break;
+    default:
+      alert('That is it! You are all done!');
+      answers.push(guess2);
+      break;
+    }
+  }
+}
+
+alert('Hope you enjoyed this javascript guessing game and learned something     about me! Lets see where you ended up with points!');
+var finalScore = userPoints + userBonus;
+console.log('add user points and bonus points');
+console.log(finalScore);
+
+if(finalScore > 0) {
+  alert(user + ' you ended with a final score of ' + finalScore + '. You win! Anything above 0 wins!!!!');
+} else {
+  alert('Oh no! I stole your points away! It\'s okay ' + user + '. You still win. Nobody loses here!');
+}
+console.log('end of the javascript stuff');
