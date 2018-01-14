@@ -232,7 +232,7 @@ alert('Alright ' + user + ', I kinda lied. I added more but I really wanted to k
 while (userAttempts > 0) {
 
   var number = '26';
-  var guess = prompt('Guess what number I was thinking at the time I was writing this script! I\'ll give you a hit, the number is between 10 and 40. You have ' + userAttempts + '!');
+  var guess = prompt('Guess what number I was thinking at the time I was writing this script! I\'ll give you a hit, the number is between 10 and 40. Attempts left: ' + userAttempts + '!');
   var compare = '';
   console.log(guess);
   if(isNaN(guess) === true) {
