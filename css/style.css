@@ -42,16 +42,26 @@
 }
 #boxOne {
 
-    width: 45%;
+    width: 50%;
     height: 300px;
+    background-color: dodgerblue;
     float: left;
     overflow: hidden;
 }
 #boxTwo {
 
-    width: 45%;
+    width: 50%;
     height: 300px;
+    background-color: fuchsia;
     float: right;
     overflow: hidden;
     
+}
+.listOne {
+
+    background-color: dodgerblue;
+}
+.listTwo {
+
+    background-color: fuchsia;
 }
