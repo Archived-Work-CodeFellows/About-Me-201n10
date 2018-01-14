@@ -12,7 +12,7 @@ console.log('User has connected to the site');
 alert('Come on, come all to my guess game crawl');
 console.log(answers);
 
-var user = prompt('I\'d like to know your name!', 'type your name');
+var user = prompt('I\'d like to know your name!');
 console.log('user will now be referred to as ' + user);
 console.log(user + ' currently has ' + userPoints + ' points');
 console.log(user + ' attempts left: ' + userAttempts);
