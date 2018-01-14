@@ -335,14 +335,14 @@ while(userAttempts > 0) {
     }
   }
 }
-
+console.log(answers);
 alert('Hope you enjoyed this javascript guessing game and learned something     about me! Lets see where you ended up with points!');
 var finalScore = userPoints + userBonus;
 console.log('add user points and bonus points');
 console.log(finalScore);
 
 if(finalScore > 0) {
-  alert(user + ' you ended with a final score of ' + finalScore + '. You win! Anything above 0 wins!!!!');
+  alert(user + ' you ended with a final score of ' + finalScore + ' out of 8! You win! Anything above 0 wins!!!!');
 } else {
   alert('Oh no! I stole your points away! It\'s okay ' + user + '. You still win. Nobody loses here!');
 }
