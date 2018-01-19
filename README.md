@@ -5,3 +5,9 @@ This is an simple website built with html, css and javascript. It is a guessing 
 ## Acknowledgments
 
 - [Eric Meyer](https://meyerweb.com/eric/tools/css/reset/)
+
+## Lab 4
+ Khoa Huynh was the driver
+ Eric Singleton was the navigator
+
+
