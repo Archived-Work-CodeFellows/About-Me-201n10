@@ -27,7 +27,7 @@ while(userAttempts > 0) {
   answers.push(prompt('First Question: Am I a musician?', 'type yes or no').toLowerCase());
   console.log(user + ' has answered ' + answers[0]);
 
-  if(answers[0] === 'yes' || answers[0] === 'y') {      
+  if(answers[0] === 'yes' || answers[0] === 'y') {
     break;
   } else {
     userAttempts--;
@@ -93,7 +93,7 @@ while( userAttempts > 0) {
 
 userAttempts = 3;
 
-if(answers[1] === 'yes' || answers[1] === 'y') {  
+if(answers[1] === 'yes' || answers[1] === 'y') {
   alert('Yup you would be correct, or that coin was correct or however your preferred method of guessing...um...guessed. I come from a comic book family, playing board games, role playing, super heroes, sci-fi space western...you name it. It\'s a lot of fun to have an active imagination! Point for you!');
   userPoints++;
   console.log(user + ' points: ' + userPoints);
@@ -110,7 +110,7 @@ alert('Cool feeling good? Sweet.');
 while( userAttempts > 0) {
 
   answers.push(prompt('Do I have any siblings?', 'type yes or no').toLowerCase());
-  console.log(user + ' has answered with ' + answers[2]);  
+  console.log(user + ' has answered with ' + answers[2]);
   if(answers[2] === 'yes' || answers[2] === 'y') {
     break;
   } else {
@@ -145,7 +145,7 @@ if(answers[2] === 'yes' || answers[2] === 'y') {
   if(bonusQuestion === 'yes' || bonusQuestion === 'y') {
     userBonus++;
     alert('That was it! You did it ' + user + '! Enjoy free stuff!');
-    console.log(user + ' points: '  + userPoints + ' bonus points: ' + userBonus);
+    console.log(user + ' points: ' + userPoints + ' bonus points: ' + userBonus);
   } else {
     alert('Oh that is cool too. Yeah I don\'t need bonus points either. Just asking for a friend');
     console.log(user + ' points: ' + userPoints);
@@ -165,7 +165,7 @@ while( userAttempts > 0) {
   answers.push(prompt('Curveball! Am I a super secret ninja plotting to take over the world??').toLowerCase());
   console.log(user + ' has answered with ' + answers[3]);
 
-  if(answers[3] === 'no' || answers[3] === 'n') {      
+  if(answers[3] === 'no' || answers[3] === 'n') {
     break;
   } else {
     userAttempts--;
@@ -208,7 +208,7 @@ alert('If you get this question right, you win. If you get it wrong, well you do
 answers[4] = prompt('Am I colorblind?', 'type yes or no').toLowerCase();
 console.log(user + ' has answered ' + answers[4]);
 
-if(answers[4] === 'yes' || answers[4] === 'y') {   
+if(answers[4] === 'yes' || answers[4] === 'y') {
   userPoints++;
   alert('Wow ' + user + '! Either you know me pretty well or that was a good guess! (probably a guess cause well...this is a guessing game)');
   console.log(user + ' points: ' + userPoints);
